@@ -1,0 +1,263 @@
+
+$color-red: #EF3E42;
+$color-red-hover: #ef3e4180;
+$color-blue: #332982;
+$color-blue-hover: #33298283;
+$color-gray: #777;
+$color-white: #ffffff;
+$color-white-hover: #ffffff7e;
+
+$font-family-primary: 'Open Sans' !default;
+$font-family-secondary: 'Open Sans Condensed', sans-serif;
+
+$h1-font-size: 60px;
+$h1-font-weight: 300;
+
+$h2-font-size: 20px;
+$h2-font-weight: bold;
+
+$theme-colors: (
+    red: $color-red,
+    blue: $color-blue,
+    gray: $color-gray
+);
+
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+//Header
+
+.header {
+    width: 100%;
+    background-color: $color-red;
+}
+
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-dark .navbar-brand {
+    font-family: $font-family-secondary;
+    font-size: 40px;
+    font-weight: 300;
+ }
+
+ .navbar-dark .navbar-nav .nav-link {
+     color: $color-white;
+ }
+
+ .navbar-dark .navbar-toggler {
+    border-color: $color-white;
+}
+
+
+//Landing Image
+
+.trim-img {
+    width: fit-content;
+    margin: auto;
+    height: 40vw;
+    min-height: 300px;
+    max-height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.landing-img {
+    min-height: 300px;
+    object-fit: cover;
+}
+
+.shadow-bar {
+    background-color: rgba(0,0,0,.4);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: $color-white; 
+}
+
+
+//Cards
+
+.card {
+    border-radius: 0;
+    border: none;
+}
+
+.volunteer-card {
+    font-family: $font-family-primary !important;
+    color: $color-gray !important;
+}
+
+.card-shadow {
+    -webkit-box-shadow: 0px 8px 36px -6px rgba(0,0,0,0.44);
+    -moz-box-shadow: 0px 8px 36px -6px rgba(0,0,0,0.44);
+    box-shadow: 0px 8px 36px -6px rgba(0,0,0,0.44);
+}
+
+.overlay {
+    position: absolute;
+    top: 4rem;
+    left: .75rem;
+    color: $color-white;
+}
+
+
+//Buttons
+
+.sqr-btn{
+    background: rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.white-btn {
+    border-color: $color-white;
+    color: $color-white;
+}
+
+.white-btn:hover {
+    background-color: $color-white-hover;
+}
+
+.blue-btn {
+    border-color: $color-blue;
+    color: $color-blue;
+}
+
+.blue-btn:hover {
+    background-color: $color-blue-hover;
+}
+
+.red-btn {
+    border-color: $color-red;
+    color: $color-red;
+}
+
+.red-btn:hover {
+    background-color: $color-red-hover;
+}
+
+.adopt-btn {
+    width: 170px;
+    padding: 5px 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.join-btn {
+    width: fit-content;
+    padding: 5px 10px;
+    margin-top: 20px;
+}
+
+.read-more-btn {
+    width: fit-content;
+    padding: 4px 35px;
+    margin-top: 20px;
+}
+
+
+//Tabs
+
+.nav-link{
+    color: $color-gray;
+    font-weight: bold;
+    padding-left: 0;
+    margin-right: 30px;
+}
+
+.nav-tabs .nav-link.active {
+    background: none;
+    border: none;
+    color: $color-blue;
+    border-bottom: 6px solid $color-blue;
+}
+
+.nav-tabs{
+    border: none;
+  }
+
+.tab-content{  
+    padding:5px
+}
+
+.nav-tabs > li > a{
+   order: medium none;
+}
+
+.nav-tabs > li > a:hover{
+    border: medium none;
+    border-radius: 0;
+    color:$color-blue;
+}
+
+programs-title {
+    color: $color-red;
+    font-weight: bold;
+}
+
+
+//Footer
+
+.footer {
+    padding-top: 40px;
+    height: 40vh;
+    width: 100%;
+    background-color: $color-blue;
+    border-top: 5px solid $color-red;
+    color: $color-white;
+}
+
+.address {
+    margin-top: 20px;
+    font-size: .75rem;
+}
+
+
+//Utility
+
+.pad-top {
+    padding-top: 30px;
+}
+
+h1 {
+    font-family: $font-family-secondary;
+}
+
+h2 {
+    margin: 0;
+    font-family: $font-family-secondary;
+    font-weight: bold;
+}
+
+body {
+    font-family: $font-family-primary;
+    font-weight: normal;
+}
+
+
+//Media
+
+@media only screen and (max-width: 600px) {
+    .navbar-dark .navbar-brand {
+        font-size: 6vw;
+    }
+
+    .shadow-bar h1{
+        font-size: 25px;
+    }
+
+    .adopt-btn {
+        font-size: 10px;
+        width: 100px;
+    }
+}
